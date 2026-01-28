@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-sharepoint"
+version = "2.0.0"
+description = "SharePoint MCP Server with Modern Azure AD Authentication"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Updated by Assistant", email = "[email protected]" }
+]
+keywords = ["mcp", "sharepoint", "microsoft", "azure", "office365", "msal"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "mcp>=1.0.0",
+    "office365-rest-python-client>=2.5.0",
+    "msal>=1.24.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/mcp-sharepoint"
+Repository = "https://github.com/your-username/mcp-sharepoint"
+"Bug Tracker" = "https://github.com/your-username/mcp-sharepoint/issues"
+
+[project.scripts]
+mcp-sharepoint = "mcp_sharepoint:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
