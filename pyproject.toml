@@ -3,15 +3,12 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mcp-sharepoint"
-version = "2.0.0"
-description = "SharePoint MCP Server with Modern Azure AD Authentication"
+name = "mcp-sharepoint-us"
+version = "2.5.6"
+description = "SharePoint MCP Server with Microsoft Graph API"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [
-    { name = "Updated by Assistant", email = "[email protected]" }
-]
 keywords = ["mcp", "sharepoint", "microsoft", "azure", "office365", "msal"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -29,6 +26,10 @@ dependencies = [
     "msal>=1.24.0",
     "python-dotenv>=1.0.0",
     "pydantic>=2.0.0",
+    "requests>=2.31.0",
+    "python-docx>=1.1.0",
+    "openpyxl>=3.1.0",
+    "python-pptx>=0.6.21",
 ]
 
 [project.optional-dependencies]
@@ -40,12 +41,12 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-username/mcp-sharepoint"
-Repository = "https://github.com/your-username/mcp-sharepoint"
-"Bug Tracker" = "https://github.com/your-username/mcp-sharepoint/issues"
+Homepage = "https://github.com/mdev26/mcp-sharepoint-us"
+Repository = "https://github.com/mdev26/mcp-sharepoint-us"
+"Bug Tracker" = "https://github.com/mdev26/mcp-sharepoint-us/issues"
 
 [project.scripts]
-mcp-sharepoint = "mcp_sharepoint:main"
+mcp-sharepoint-us = "mcp_sharepoint:run"
 
 [tool.setuptools.packages.find]
 where = ["src"]

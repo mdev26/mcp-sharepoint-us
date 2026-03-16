@@ -67,3 +67,10 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
+
+# Claude Code
+.claude/
+
+# Test artifacts
+test_output.docx
+test_output*.docx
